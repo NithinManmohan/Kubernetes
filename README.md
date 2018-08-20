@@ -1,4 +1,5 @@
-# Kubernetes
+# Kubernetes setup, along with YAML files for sample deployment and ingress setup
+
 Repository comprising of sample yaml files for deploying and exposing apps
 
 On a RHEL 7.3 64bit
