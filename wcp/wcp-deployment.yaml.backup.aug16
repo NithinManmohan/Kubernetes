@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1 # for versions before 1.7.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: wcp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wcp
+  template:
+    metadata:
+      labels:
+        app: wcp
+    spec:
+      hostNetwork: true
+      containers:
+      - name: wcp
+        image: 16.181.233.180:5000/wcpnithin:v1.0
+        command: ["/opt/dataSourceCreate_nithin.sh"]
+        ports:
+        - containerPort: 7001

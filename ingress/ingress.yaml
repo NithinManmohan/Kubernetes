@@ -1,0 +1,15 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: httpd
+  namespace: default
+spec:
+  rules:
+  - host: stormbreaker.ecare.com
+    http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: httpd
+          servicePort: 80
