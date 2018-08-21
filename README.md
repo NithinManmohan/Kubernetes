@@ -51,4 +51,5 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 kubectl create ns <CUSTOM_NS>
 
 kubectl create -f <DEPLOYMENT_YAML> --namespace=<CUSTOM_NS>
+
 kubectl create -f <SERVICE_YAML> --namespace=<CUSTOM_NS>
